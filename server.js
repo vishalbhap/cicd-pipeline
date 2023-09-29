@@ -1,16 +1,29 @@
 const express = require('express')
-const res = require('express/lib/response')
 
 const app = express()
+// dummy commit
 
 app.get('/', (req, res) => {
     res.json({
         status: 200,
-        message: "hello world"
+        message: "Welcome Vishal"
     })
 })
 
-// port details
+app.get('/mahesh', (req, res) => {
+    res.json({
+        status: 200,
+        message: "Hi Mahesh"
+    })
+})
+
+app.get('/mahesh/users', (req, res) => {
+    res.json({
+        status: 200,
+        message: "Hi Mahesh, users loaded."
+    })
+})
+
 app.listen(8080, () => {
     console.log('server running on port 8080')
 })
